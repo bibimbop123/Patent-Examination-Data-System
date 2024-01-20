@@ -1,9 +1,17 @@
-require "sinatra"
-require "sinatra/reloader"
+require 'sinatra'
+require 'sinatra/activerecord'
+require 'rest-client'
+require 'json'
+require 'better_errors'
+require 'binding_of_caller'
+require 'table_print'
+
+# Set up API base URL
+@url = 'https://ped.uspto.gov/api/'
+@response = HTTP.get(@url)
+@data = JSON.parse(@response)
 
 get("/") do
-  "
-  <h1>Welcome to your Sinatra App!</h1>
-  <p>Define some routes in app.rb</p>
-  "
+
+  erb(:home)
 end

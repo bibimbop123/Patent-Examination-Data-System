@@ -1,15 +1,13 @@
+# Gemfile
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "3.2.1"
+ruby '3.0.0'
+
 
 gem "sinatra"
 gem "sinatra-contrib"
-
-# Use Puma as the app server
 gem "puma", "~> 5.0"
-
-# use active record
 gem "sinatra-activerecord"
 
 group :development do
@@ -17,6 +15,7 @@ group :development do
   gem "binding_of_caller"
   gem "table_print"
   gem "appdev_support"
+  gem "rest-client"  # Add this line to include the rest-client gem
 end
 
 group :development, :test do

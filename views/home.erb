@@ -1,0 +1,14 @@
+<div>
+  <h1> Welcome to the home page! </h1>
+  <form action="/search" method="get">
+    <label for="author">Select an author:</label>
+    <select id="author" name="author">
+      <option value="">Select an author</option>
+      <option value="Emily Dickinson">Emily Dickinson</option>
+      <option value="Robert Frost">Robert Frost</option>
+      <!-- Add more options as needed -->
+    </select>
+    <input type="submit" value="Submit">
+  </form>
+  <p> <%= @result %> </p>
+</div>
